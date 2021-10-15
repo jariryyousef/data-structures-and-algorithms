@@ -1,1 +1,6 @@
-![image](array-insert-shift.PNG)
+#ArrayInsertShift
+
+![image](insertshiftarray.jpg)
+
+## Approach & Efficiency
+- 1 hour
