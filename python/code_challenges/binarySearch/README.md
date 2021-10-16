@@ -1,4 +1,7 @@
 # binary Search
 
 Whiteboard Process :
-![test](Untitled(1).jpg)
+![test](binarySearch.jpg)
+
+ ## Approach & Efficiency
+ 1 hour
