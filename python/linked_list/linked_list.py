@@ -18,19 +18,18 @@ class LinkedList:
         # its empty linked list
         self.head=None
     
-    def insert(self,value):    
-        new_node=Node(value)
-        if self.head is None:
-            self.head=new_node
-        else:
-            data=self.head
-            self.head=new_node
-            self.head.next=data
-        # # self.head = Node(value, self.head)
-    #     new_node = Node(value)
-         
-    #    # 3. Make next of new Node as head
-    #     new_node.next = self.head
-         
-    #     # 4. Move the head to point to new Node
-    #     self.head = new_node
+    # def insert(self,value):    
+    #     new_node=Node(value)
+    #     if self.head is None:
+    #         self.head=new_node
+    #     else:
+    #         data=self.head
+    #         self.head=new_node
+    #         self.head.next=data
+
+    def insert(self, value):
+        new_node = Node(value)
+        if self.head:
+            new_node.next = self.head
+        self.head = new_node
+        
