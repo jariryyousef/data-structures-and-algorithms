@@ -27,3 +27,6 @@ To run your tests
 | code challenge 1 |[Reverse an Array ](https://github.com/jariryyousef/data-structures-and-algorithms/blob/array-reverse/python/code_challenges/reverseArray/README.md)|
 |code challenge 2 | [insertShiftArray](https://github.com/jariryyousef/data-structures-and-algorithms/blob/insertShiftArray/python/code_challenges/insertShiftArray/README.md) |
 | code challenge 3| [Binary search](https://github.com/jariryyousef/data-structures-and-algorithms/blob/binarySearch/python/code_challenges/binarySearch/README.md)|
+| linked list 05| [linked list](https://github.com/jariryyousef/data-structures-and-algorithms/pull/19/commits/b745ea7f43bc56bad30b81526841bdf93416cd77)|
+|code challenge 10| [stack and queue](https://github.com/jariryyousef/data-structures-and-algorithms/pull/18)|
+|code challenge 11| [stack and queue-pseudo](https://github.com/jariryyousef/data-structures-and-algorithms/blob/5732e588f502ec0a09a994d75bc21c655ac47cbb/python/stack_and_queue_pseudo/README.md)|
