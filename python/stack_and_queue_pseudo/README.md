@@ -1,3 +1,8 @@
+- [x] Create a new class called pseudo queue
+- [x] Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
+- [x] enqueue method: Inserts value into the PseudoQueue, using a first-in, first-out approach.
+- [x] dequeue method: Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+
 # Challenge Summary
 - Create a new class called pseudo queue.
 
