@@ -30,3 +30,5 @@ To run your tests
 | linked list 05| [linked list](https://github.com/jariryyousef/data-structures-and-algorithms/pull/19/commits/b745ea7f43bc56bad30b81526841bdf93416cd77)|
 |code challenge 10| [stack and queue](https://github.com/jariryyousef/data-structures-and-algorithms/pull/18)|
 |code challenge 11| [stack and queue-pseudo](https://github.com/jariryyousef/data-structures-and-algorithms/blob/5732e588f502ec0a09a994d75bc21c655ac47cbb/python/stack_and_queue_pseudo/README.md)|
+|code challenge 12| [stack and queue-animal](https://github.com/jariryyousef/data-structures-and-algorithms/blob/5b77f35ea000a8c4da0b256260e1728ff1e50298/python/stack_and_queue_pseudo/README.md)|
+
