@@ -32,4 +32,4 @@ To run your tests
 |code challenge 10| [stack and queue](https://github.com/jariryyousef/data-structures-and-algorithms/pull/18)|
 |code challenge 11| [stack and queue-pseudo](https://github.com/jariryyousef/data-structures-and-algorithms/blob/5732e588f502ec0a09a994d75bc21c655ac47cbb/python/stack_and_queue_pseudo/README.md)|
 |code challenge 12| [stack and queue-animal](https://github.com/jariryyousef/data-structures-and-algorithms/blob/5b77f35ea000a8c4da0b256260e1728ff1e50298/python/stack_and_queue_pseudo/README.md)|
-
+|code challenge 13| [stack and queue-brackets](https://github.com/jariryyousef/data-structures-and-algorithms/blob/0260327f7aa6bb77200558e7a9f3b1d35da2ec82/python/stack_and_queue/README.md)|
