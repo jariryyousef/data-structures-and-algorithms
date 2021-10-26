@@ -1,5 +1,7 @@
 from stack_and_queue.stack import Stack
 
+# https://www.youtube.com/watch?v=PLvD3pHaWHQ
+# https://www.youtube.com/watch?v=TC7apM-xGaU
 def is_match(paran1,paran2):
     if paran1 == "(" and paran2 ==")":
         return True
