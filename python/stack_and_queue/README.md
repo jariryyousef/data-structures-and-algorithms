@@ -33,3 +33,26 @@ For the space => O(1)
 - Dequeue method: Removes the node from the front of the queue.
 - Peek method:Returns: Value of the node located at the top of the stack.
 - Is empty method: Returns: Boolean indicating whether or not the stack is empty.
+
+
+
+
+
+## Challenge
+- [X]Write a function called validate brackets
+- [X]Arguments: string
+- [X]Return: boolean
+    representing whether or not the brackets in the string are balanced
+
+
+
+# Challenge Summary
+- Stacks and Queues brackets
+
+## Whiteboard Process
+![](stack_queue_brackets.jpg)
+## Approach & Efficiency
+
+Big O:
+Time =>O(n)
+Space=>O(n)
