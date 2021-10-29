@@ -172,19 +172,3 @@ class LinkedList:
                 flag = False
 
         return list1
-
-
-# if __name__ == "__main__":
-
-#     linked_list1 = LinkedList()
-#     linked_list1.insert(2)
-#     linked_list1.insert(9)
-#     linked_list1.insert(3)
-#     linked_list1.insert(5)
-#     # linked_list1.insert(1)
-#     # linked_list1.insert(2)
-#     linked_list2 = LinkedList()
-#     linked_list2.insert(1)
-#     linked_list2.insert(7)
-#     linked_list2.insert(4)
-#     linked_list2.insert(0)
