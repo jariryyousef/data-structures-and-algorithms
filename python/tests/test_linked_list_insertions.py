@@ -48,3 +48,24 @@ def test_linked_insert_after_last(llt):
 
 def test_linked_values(llt):
     assert str(llt) == f" {{5}} ->  {{10}} ->  {{15}} -> NULL"
+
+
+###### 
+@pytest.mark.parametrize(
+    "input,expected_value",
+    [
+        (-5, "Negative number not acceptable"),
+        (10, "index not found"),
+        (0, 15),
+        (1, 10),
+        (2, 5),
+    ],
+)
+def test_kth_from_end(input, expected_value, llt):
+
+    output = llt.kthFromEnd(input)
+    assert output == expected_value
+
+def test_kthFromEnd_of_empty_linkedList():
+    empty_ll = LinkedList()
+    assert empty_ll.kthFromEnd(1) == "empty List"

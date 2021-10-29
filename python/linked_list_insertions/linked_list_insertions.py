@@ -93,3 +93,24 @@ class LinkedList:
             current = current.next
         string += "NULL"
         return string
+
+########## 
+    def kthFromEnd(self, k):
+        temp = self.head
+        if temp == None:
+            return ("Empty List")
+
+        if k <= -1:
+            return("Negative number not acceptable")
+        index = -1
+        temp = self.head
+        while temp:
+            temp = temp.next
+            index = index + 1
+        if index >= k:
+            temp = self.head
+            for i in range(index - k):
+                temp = temp.next
+            return temp.value
+        else:
+            return ("Index not found")
