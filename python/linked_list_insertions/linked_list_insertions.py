@@ -114,3 +114,61 @@ class LinkedList:
             return temp.value
         else:
             return ("Index not found")
+#########################################
+
+    def zipLists(list1, list2):
+        if not list1.head:
+            list1.head = list2.head
+            list2.head = None
+
+        current_item1 = list1.head
+        current_item2 = list2.head
+        flag = True
+        while flag:
+            if current_item1 and current_item2:
+                pre_temp1 = current_item1
+                temp1 = current_item1.next
+                temp2 = current_item2.next
+                if current_item1.next and current_item2.next:
+                    current_item1.next = current_item2
+                    current_item1 = temp1
+                    current_item2.next = current_item1
+                    current_item2 = temp2
+                elif current_item1.next:
+                    current_item1.next = current_item2
+                    current_item1.next.next = temp1
+                    current_item2 = None
+
+                elif current_item2.next:
+                    current_item1 = pre_temp1
+                    current_item1.next = current_item2
+                    current_item2 = None
+                elif current_item2 and current_item1:
+                    current_item1.next = current_item2
+                    current_item2 = None
+                elif current_item2:
+                    current_item1 = current_item2
+                    current_item2 = None
+                else:
+                    flag = False
+            elif current_item1:
+                temp1 = current_item1.next
+                if current_item1.next:
+                    current_item1 = current_item1.next
+                elif current_item1:
+                    current_item1 = current_item2
+                    current_item2 = None
+            elif current_item2:
+                temp1 = current_item1.next
+                if current_item2.next:
+                    current_item1 = pre_temp1
+                    current_item1 = current_item2.next
+                elif current_item2:
+                    current_item1 = pre_temp1
+                    current_item1.next = current_item2
+                    current_item2 = None
+
+            else:
+                flag = False
+
+        return list1
