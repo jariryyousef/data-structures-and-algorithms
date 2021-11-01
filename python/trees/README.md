@@ -43,7 +43,26 @@ https://github.com/jariryyousef/data-structures-and-algorithms/pull/29
 
 ## Approach & Efficiency
 - time ==> O(n)
-- space ==> O(n)
+- space ==> O(1)
 
 - Write the following method for the Binary Tree class 
 - find maximum value
+
+<!-- code challange 17 -->
+
+https://github.com/jariryyousef/data-structures-and-algorithms/pull/30
+
+- [X] Write a function called breadth first
+    Arguments: tree
+    Return: list of all values in the tree, in the order they were encountered
+# Breadth first
+
+- Traverse the input tree using a Breadth-first approach
+
+![](Code-Challange(2).jpg)
+
+## Approach & Efficiency
+- time ==> O(n)
+- space ==> O(1)
+
+-   Method called breadth_first to return list of nodes in tree

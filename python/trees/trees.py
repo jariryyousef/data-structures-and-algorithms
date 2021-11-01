@@ -94,7 +94,24 @@ class BinaryTrees:
         maximum = i
 
     return maximum
- 
+ ################## code challange 17: breadth_first ######################
+
+  def breadth_first(self):
+      queue = Queue()
+      queue.enqueue(self.root)
+
+      item = []
+      while queue.peek():
+          front = queue.dequeue()
+          item += [front.data]
+  
+          if front.left:
+              queue.enqueue(front.left)
+
+          if front.right:
+              queue.enqueue(front.right)
+
+      return item
 
 class Binary_Search_Tree(BinaryTrees):
   """
@@ -157,3 +174,4 @@ class Binary_Search_Tree(BinaryTrees):
 
           return False
     return walk(self.root)
+
