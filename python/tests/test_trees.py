@@ -141,3 +141,25 @@ def test_contains():
     assert tree.contains(20) == True
     assert tree.contains(5) == True
     assert tree.contains(1) == False
+
+
+################## code challange 16: tree-max ######################
+
+def test_max_tree():
+    tree=BinaryTrees()
+
+    node1 = Node(1)
+    node2 = Node(2)
+    node3 = Node(3)
+    node4 = Node(4)
+    node5 = Node(5)
+    
+    node1.left = node2
+    node1.right = node3
+    node2.left = node4
+    node2.right=node5
+    tree.root = node1
+
+    expected = tree.max_tree()
+    actual = 5
+    assert expected == actual

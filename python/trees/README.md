@@ -23,10 +23,27 @@ Argument: value
 Returns: boolean indicating whether or not the value is in the tree at least once.  
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 pre order : O(n)    
 in order : O(n)  
 post order : O(n)  
 
 add : O(logN)  
 contains : O(logN)
+
+<!-- code challange 16 -->
+https://github.com/jariryyousef/data-structures-and-algorithms/pull/29 
+
+- [X] Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+# Max Trees
+
+- Find the Maximum Value in a Binary Tree
+
+![](Code-Challange(1).jpg)
+
+## Approach & Efficiency
+- time ==> O(n)
+- space ==> O(n)
+
+- Write the following method for the Binary Tree class 
+- find maximum value
