@@ -38,21 +38,27 @@ class Pseudo_queue:
         self.stack1=Stack()
         self.stack2=Stack()
 
-    def enqueue(self,value):
+    def enqueue(self,value=None):
+        if value == None:
+            return 'no value'
         self.stack1.push(value)
 
-
     def dequeue(self):
-        if self.stack1 is None:
-            raise Exception("queue is empty")
-        while self.stack1 is not None :
-            self.poped_data= self.stack1.pop()
-            self.stack2.push(self.poped_data)
         
-        self.de_q=self.stack2.pop()
-
-        while self.stack2 is not None :
-            self.poped_data= self.stack2.pop()
-            self.stack1.push(self.poped_data)
+        if not self.stack1.top:
+            return 'The Queue is empty'
+           
+        while self.stack1.top:
             
-        return self.de_q
+       
+            self.stack2.push(self.stack1.pop())
+
+        dequeue_value = self.stack2.pop()
+
+        while self.stack2.top:
+        
+    
+            self.stack1.push(self.stack2.pop())
+
+        return dequeue_value
+
