@@ -163,3 +163,25 @@ def test_max_tree():
     expected = tree.max_tree()
     actual = 5
     assert expected == actual
+
+
+################## code challange 17: breadth_first ######################
+
+def test_breadth_first():
+    tree=BinaryTrees()
+
+    node1 = Node('1')
+    node2 = Node('2')
+    node3 = Node('3')
+    node4 = Node('4')
+    node5 = Node('5')
+
+    node1.left = node2
+    node1.right = node3
+    node2.left = node4
+    node2.right=node5
+    tree.root = node1
+
+    expected = ['1','2','3','4','5']
+    actual = tree.breadth_first()
+    assert expected == actual
