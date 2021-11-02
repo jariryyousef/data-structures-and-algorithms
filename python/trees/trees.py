@@ -3,6 +3,9 @@ This Module defines Node , Binary Tree and Binary Search Tree
 """
 
 
+
+
+
 class Node:
     def __init__(self, data, left=None, right=None):
         self.data = data
@@ -113,6 +116,30 @@ class BinaryTrees:
 
       return item
 
+ ################## code challange 18: tree-fizz-buzz ######################
+
+
+  def tree_fizz_buzz(tree):
+    if tree.root:
+      node=tree.root
+      def walk(node):
+        if node.data %15 == 0: 
+          node.data = 'FizzBuzz'
+        elif node.data %5 == 0:
+          node.data = 'Buzz'
+        elif node.data %3 == 0 :
+          node.data = 'Fizz'
+        else:
+          node.data = str(node.data)
+        if (node.left): 
+            walk(node.left)
+        if (node.right):     
+            walk(node.right)
+
+      walk(node)
+      return tree.breadth_first()
+  
+
 class Binary_Search_Tree(BinaryTrees):
   """
   This class have toe method:
@@ -174,4 +201,3 @@ class Binary_Search_Tree(BinaryTrees):
 
           return False
     return walk(self.root)
-
