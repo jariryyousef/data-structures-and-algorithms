@@ -185,3 +185,43 @@ def test_breadth_first():
     expected = ['1','2','3','4','5']
     actual = tree.breadth_first()
     assert expected == actual
+
+################## code challange 18: tree-fizz-buzz ######################
+
+def test_tree_fizz_buzz():
+    tree=BinaryTrees()
+    node1 = Node(5)
+    node2 = Node(15)
+    node3 = Node(3)
+    node4 = Node(1)
+    node5 = Node(20)
+
+    node1.left = node2
+    node1.right = node3
+    node2.left = node4
+    node2.right = node5
+
+    tree.root = node1
+    actual = tree.tree_fizz_buzz() 
+    excepted = ['Buzz', 'FizzBuzz', 'Fizz', '1', 'Buzz']
+    assert actual  == excepted
+
+def test_buzz():
+
+    tree=BinaryTrees()
+    node1 = Node(5)
+    tree.root = node1
+    
+    actual = tree.tree_fizz_buzz() 
+    excepted = ['Buzz']
+    assert actual  == excepted
+
+def test_fizz():
+    
+    tree=BinaryTrees()
+    node1 = Node(3)
+    tree.root = node1
+    
+    actual = tree.tree_fizz_buzz() 
+    excepted = ['Fizz']
+    assert actual  == excepted

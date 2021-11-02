@@ -65,4 +65,26 @@ https://github.com/jariryyousef/data-structures-and-algorithms/pull/30
 - time ==> O(n)
 - space ==> O(1)
 
--   Method called breadth_first to return list of nodes in tree
+- Method called breadth_first to return list of nodes in tree
+
+
+# Fizz Buzz Tree
+
+https://github.com/jariryyousef/data-structures-and-algorithms/pull/31
+
+- [X] Read all of these instructions carefully.
+- [X] Name things exactly as described.
+- [X] Do all your work in a your data-structures-and-algorithms public repository.
+- [X] Create a new branch in your repo named as noted below.
+- [X] Follow the language-specific instructions for the challenge type listed below.
+- [X] Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
+
+- function called fizz buzz tree
+- Arguments: k-ary tree
+- Return: new k-ary tree
+
+![](Code-Challange(3).jpg)
+
+## Approach & Efficiency
+- time ==> O(n)
+- space ==> O(1)
