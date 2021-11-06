@@ -1,3 +1,16 @@
+https://github.com/jariryyousef/data-structures-and-algorithms/pull/24 
+
+-[X] Create a Node class that has properties for the value stored in the node, the left child node, and the right child node. 
+-[X] Create a Binary Tree class
+-[X] Create a Binary Search Tree class
+-[X] Can successfully instantiate an empty tree
+-[X] Can successfully instantiate a tree with a single root node
+-[X] Can successfully add a left child and right child to a single root node
+-[X] Can successfully return a collection from a preorder traversal
+-[X] Can successfully return a collection from an inorder traversal
+-[X] Can successfully return a collection from a postorder traversal
+
+
 # Trees
 + Binary Search Tree is a node-based binary tree data structure which has the following properties:  
 1- The left subtree of a node contains only nodes with keys lesser than the node’s key.  
