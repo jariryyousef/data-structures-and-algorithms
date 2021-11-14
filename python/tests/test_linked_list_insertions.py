@@ -51,21 +51,22 @@ def test_linked_values(llt):
 
 
 ###### 
-@pytest.mark.parametrize(
-    "input,expected_value",
-    [
-        (-5, "Negative number not acceptable"),
-        (10, "index not found"),
-        (0, 15),
-        (1, 10),
-        (2, 5),
-    ],
-)
-def test_kth_from_end(input, expected_value, llt):
+# @pytest.mark.parametrize(
+#     "input,expected_value",
+#     [
+#         (-5, "Negative number not acceptable"),
+#         (10, "index not found"),
+#         (0, 15),
+#         (1, 10),
+#         (2, 5),
+#     ],
+# )
 
-    output = llt.kthFromEnd(input)
-    assert output == expected_value
+# def test_kth_from_end(input, expected_value, llt):
 
-def test_kthFromEnd_of_empty_linkedList():
-    empty_ll = LinkedList()
-    assert empty_ll.kthFromEnd(1) == "empty List"
+#     output = llt.kthFromEnd(input)
+#     assert output == expected_value
+
+# def test_kthFromEnd_of_empty_linkedList():
+#     empty_ll = LinkedList()
+#     assert empty_ll.kthFromEnd(1) == "empty List"
