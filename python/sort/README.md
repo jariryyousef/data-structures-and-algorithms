@@ -46,3 +46,7 @@ def merge(left,right,arr):
         j += 1
         k += 1
 ```
+
+
+
+https://github.com/jariryyousef/data-structures-and-algorithms/pull/34
