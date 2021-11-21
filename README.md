@@ -36,3 +36,4 @@ To run your tests
 |code challenge 13| [stack and queue-brackets](https://github.com/jariryyousef/data-structures-and-algorithms/blob/0260327f7aa6bb77200558e7a9f3b1d35da2ec82/python/stack_and_queue/README.md)|
 |code challenge 16| [max-tree](https://github.com/jariryyousef/data-structures-and-algorithms/blob/d957909cd2cccaef9ca036862cc98181b0cd03fb/python/trees/README.md)|
 |code challenge 30| [hashtable](https://github.com/jariryyousef/data-structures-and-algorithms/blob/hash/python/hashing/README.md)|
+|code challenge 31| [hashmap-repeated-word](https://github.com/jariryyousef/data-structures-and-algorithms/blob/hash/python/hashing/README.md)|

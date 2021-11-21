@@ -68,4 +68,4 @@ https://github.com/jariryyousef/data-structures-and-algorithms/pull/37
         hash_table.add(i,i)
 
 ```
-https://github.com/jariryyousef/data-structures-and-algorithms/pull/38
+https://github.com/jariryyousef/data-structures-and-algorithms/pull/39
