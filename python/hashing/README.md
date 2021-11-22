@@ -69,3 +69,36 @@ https://github.com/jariryyousef/data-structures-and-algorithms/pull/37
 
 ```
 https://github.com/jariryyousef/data-structures-and-algorithms/pull/39
+
+
+
+
+# Code Challenge 32 | Hashmap Repeated Word
+- Find common values in 2 binary trees.
+
+
+## Whiteboard Process
+![](CC32.PNG)
+
+## Approach & Efficiency
+- time ==> O(n)
+- space ==> O(n)
+
+## Solution
+```
+def tree_intersection(tree1,tree2):
+  tree1_list = tree1.pre_order()
+  tree2_list = tree2.pre_order()
+  hash_table = HashTable()
+  result = []
+  
+  for i in tree1_list:
+    hash_table.add(i,i)
+  
+  for i in tree2_list:
+    if hash_table.contains(i):
+      result.append(i)
+  return result
+
+```
+https://github.com/jariryyousef/data-structures-and-algorithms/pull/40
