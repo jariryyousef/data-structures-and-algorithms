@@ -45,3 +45,27 @@ A hash table is a special collection that is used to store key-value items. So i
 
 
 https://github.com/jariryyousef/data-structures-and-algorithms/pull/37
+
+# Code Challenge 31 | Hashmap Repeated Word
+- Find the first repeated word in a book.
+
+
+## Whiteboard Process
+![](CodeCh31.PNG)
+
+## Approach & Efficiency
+- time ==> O(n)
+- space ==> O(n)
+
+## Solution
+```
+    def repeated_word(self,string):
+      hash_table = HashTable()
+      string = re.sub('[^A-z ]+', '', string).split(" ")
+      for i in string:
+        i = i.lower()
+        if i and hash_table.contains(i):return i
+        hash_table.add(i,i)
+
+```
+https://github.com/jariryyousef/data-structures-and-algorithms/pull/39

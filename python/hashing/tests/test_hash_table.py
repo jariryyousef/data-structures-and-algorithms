@@ -53,3 +53,16 @@ def test_handle_a_collision_within_the_hashtable():
     hash_table.add('yousef', 1)
     hash_table.add('jariry', 1)
     assert hash_table.get('jariry') == 1 and hash_table.get('yousef') ==1
+
+
+#####################################CodeChallange31#######################################
+
+def test_repeated_word():
+	
+	assert HashTable().repeated_word("Once upon a time, there was a brave princess who...") == 'a'
+
+	assert HashTable().repeated_word("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only...") == 'it'
+	
+	assert HashTable().repeated_word("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...") == 'summer'
+
+	assert HashTable().repeated_word("yousef jariry, Jariry") == 'jariry'

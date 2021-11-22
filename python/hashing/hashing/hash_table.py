@@ -1,7 +1,7 @@
 """
 The implementation of Node class, Linked list class, and Hashmap class. 
 """
-
+import re
 
 class Node:
     def __init__(self, value=None, next_=None):
@@ -106,4 +106,18 @@ class HashTable:
           current = current.next
 
       return False
-    
+  
+#####################################CodeChallange31#######################################
+    def repeated_word(self,string):
+      """
+      finds the first word to occur more than once in a string
+      Arguments: string
+      Return: string
+      """
+      
+      hash_table = HashTable()
+      string = re.sub('[^A-z ]+', '', string).split(" ")
+      for i in string:
+        i = i.lower()
+        if i and hash_table.contains(i):return i
+        hash_table.add(i,i)
