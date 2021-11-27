@@ -1,5 +1,5 @@
 from hashing.hash_table import HashTable
-from hashing.tree_intersection import tree_intersection ,BinaryTree , Node
+from hashing.tree_intersection import tree_intersection ,BinaryTree , Node 
 # from trees.trees import Node, BinaryTree
 import pytest
 
@@ -126,3 +126,12 @@ def test_tree_intersection():
 	actual = tree_intersection(binary_tree1,binary_tree2)
 	excepted = ['100', '160', '125', '175', '200', '350', '500']
 	assert actual == excepted
+
+
+
+def test_left_join():
+    hash1 = HashTable()
+    hash1.add('yousef','jariry')
+    hash2 = HashTable()
+    hash2.add('yousef','j')
+    assert HashTable.left_join(hash1, hash2) == [['yousef', 'jariry', 'j']]
