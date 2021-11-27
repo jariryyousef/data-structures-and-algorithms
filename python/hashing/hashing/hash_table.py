@@ -33,7 +33,7 @@ class HashTable:
         
         """
         self.__size = size
-        self.__buckets = [None] * size
+        self.buckets = [None] * size
 
     def __hash(self, key):
         """
@@ -59,11 +59,11 @@ class HashTable:
 
         index = self.__hash(key)
 
-        if not self.__buckets[index]:
-          self.__buckets[index] = LinkedList()
+        if not self.buckets[index]:
+          self.buckets[index] = LinkedList()
 
         my_value = [key,value]
-        self.__buckets[index].insert(my_value)
+        self.buckets[index].insert(my_value)
 
     def get(self, key):
       """
@@ -75,9 +75,9 @@ class HashTable:
       # calculate index
       index = self.__hash(key)
       # check if there is a non empty bucket at the index
-      if self.__buckets[index]:
+      if self.buckets[index]:
         # iterate over linked list
-        linked_list = self.__buckets[index]
+        linked_list = self.buckets[index]
         current = linked_list.head
         while current:
           # check if the key in each node matches
@@ -95,8 +95,8 @@ class HashTable:
       Returns: Boolean
       """
       index = self.__hash(key)
-      if self.__buckets[index]:
-        linked_list = self.__buckets[index]
+      if self.buckets[index]:
+        linked_list = self.buckets[index]
         current = linked_list.head
 
         while current:
@@ -123,57 +123,16 @@ class HashTable:
         hash_table.add(i,i)
 
 
-#####################################CodeChallange32#######################################
+#####################################CodeChallange33#######################################
 
-# from trees.trees import Node,BinaryTrees
+    def left_join(hash1, hash2):
 
-# class Node():
-#   def __init__(self,value='',left=None,right=None):
-#       self.value = value
-#       self.left = left
-#       self.right = right
-#       self.next = None
-
-#   def __str__(self):
-#       return str(self.value)
-
-# class BinaryTree():
-#   def __init__(self, node=None):
-#       self.root = node
-
-#   def pre_order(self):
-#     pre_order_output = []
-
-#     def walk(root):
-#       pre_order_output.append(root.value)
-#       if (root.left): walk(root.left)
-#       if (root.right): walk(root.right)
-
-#     walk(self.root)
-#     return pre_order_output
-
-
-
-
-
-# def tree_intersection(tree1,tree2):
-#   # tree1 = BinaryTree()
-#   # tree2 = BinaryTree()
-  
-#   tree1_list = tree1.pre_order()
-#   tree2_list = tree2.pre_order()
-#   hash_table = HashTable()
-#   result = []
-  
-#   for i in tree1_list:
-#     hash_table.add(i,i)
-  
-#   for i in tree2_list:
-#     if hash_table.contains(i):
-#       result.append(i)
-
-#   return result
-
-# # tree1= [1,2,3,5,6]
-# # tree2 = [1,2,5,7,6] 
-# # print(tree_intersection(tree1,tree2))
+        arr = []
+        for i in hash1.buckets:
+            if i:
+                if hash2.contains(i.head.value[0]):
+                    right_item = hash2.get(i.head.value[0])
+                    arr.append([i.head.value[0], i.head.value[1],right_item])
+                else:
+                    arr.append([i.head.value[0], i.head.value[1],'Null'])
+        return arr
