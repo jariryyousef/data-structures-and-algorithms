@@ -20,11 +20,11 @@ class Queue:
         self.dq = deque()
 
     def enqueue(self, value):
-        self.dq.appendLeft(value)
+        self.dq.appendleft(value)
 
     def dequeue(self):
-        self.dq.pop()
-
+        return self.dq.pop()
+        
     def __len__(self):
         return len(self.dq)
 
@@ -111,22 +111,27 @@ class Graph:
         """ """
         return self.__adjacency_list.get(vertex, [])
 
-    def breadth_first_search(self, start_vertex, action=(lambda vertex: None)):
+
+
+#######################################Code Challange 36############################################## 
+    def breadth_first_search(self, start_vertex):
         queue = Queue()
         visited = set()
-
+        nodes = []
         queue.enqueue(start_vertex)
         visited.add(start_vertex)
 
         while len(queue):
             current_vertex = queue.dequeue()
-            action(current_vertex)
 
-            neighbors = self.get_neigbors(current_vertex)
-
+            neighbors = self.get_neighbors(current_vertex)
+            nodes.append(current_vertex.value)
             for edge in neighbors:
                 neighbor = edge.vertex
 
                 if neighbor not in visited:
                     visited.add(neighbor)
                     queue.enqueue(neighbor)
+        return nodes
+
+  

@@ -96,3 +96,22 @@ def test_get_neighbors():
     assert neighbor_edge.vertex.value == 'banana'
 
     assert neighbor_edge.weight == 44
+
+
+
+
+
+#######################################Code Challange 36############################################## 
+def test_breadth_first_search():
+    graph = Graph()
+
+    yousef = graph.add_node('yousef')
+    mohammad = graph.add_node('mohammad')
+    abd = graph.add_node('abd')
+    jariry = graph.add_node('jariry')
+
+    graph.add_edge(yousef,mohammad)
+    graph.add_edge(mohammad,abd)
+    graph.add_edge(abd,jariry)
+
+    assert graph.breadth_first_search(yousef) ==  ['yousef' ,'mohammad' ,'abd','jariry'] 
