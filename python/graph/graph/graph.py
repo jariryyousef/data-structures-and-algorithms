@@ -164,3 +164,27 @@ class Graph:
                 return False,'$0'
             
             return True,'$'+ str(count)
+
+####################################### Code Challange 38 ############################################## 
+
+
+    def graph_depth_first(self, vertex=None):
+        if not vertex:
+            return[]
+        visited = set()
+        nodes = []
+
+        def rec_fun(node):
+            neighbors = self.get_neighbors(node)
+            for i in neighbors:
+                node_v = i.vertex
+                if node_v in visited:
+                    continue
+                else:
+                    nodes.append(node_v)
+                    visited.add(node_v)
+                    rec_fun(node_v)
+
+        nodes.append(vertex)
+        rec_fun(vertex)
+        return nodes

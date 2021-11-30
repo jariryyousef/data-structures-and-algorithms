@@ -142,3 +142,31 @@ def test_business_trip():
   cities = [node1,node2,node3]
   
   assert graph.business_trip(cities) == (True, '$249')
+
+
+####################################### Code Challange 38 ##############################################
+def test_graph_depth_first():
+    graph = Graph()
+
+    a = graph.add_node('A')
+    b = graph.add_node('B')
+    c = graph.add_node('C')
+    d = graph.add_node('D')
+    e = graph.add_node('E')
+    f = graph.add_node('F')
+    g = graph.add_node('G')
+    h = graph.add_node('H')
+    
+    graph.add_edge(a,b)
+    graph.add_edge(a,d)
+    graph.add_edge(b,c)
+    graph.add_edge(b,d)
+    graph.add_edge(c,g)
+    graph.add_edge(d,e)
+    graph.add_edge(d,h)
+    graph.add_edge(d,f)
+    graph.add_edge(f,h)
+    
+    values = graph.graph_depth_first(a)
+    actual = [vertex.value for vertex in values]
+    assert actual == ['A', 'B', 'C', 'G', 'D', 'E', 'H', 'F']
