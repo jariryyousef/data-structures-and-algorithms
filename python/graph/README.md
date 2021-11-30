@@ -77,3 +77,40 @@ https://github.com/jariryyousef/data-structures-and-algorithms/pull/45
             return True,'$'+ str(count)
 ```
 https://github.com/jariryyousef/data-structures-and-algorithms/pull/46
+
+
+
+# Code Challenge 38 | Graph depth first
+Conduct a depth first preorder traversal on a graph
+
+## Whiteboard Process
+![](CodeChallange38.jpg)
+
+## Approach & Efficiency
+- time ==>  O(n)
+- space ==> O(n logn)
+
+## Solution
+```
+    def graph_depth_first(self, vertex=None):
+        if not vertex:
+            return[]
+        visited = set()
+        nodes = []
+
+        def rec_fun(node):
+            neighbors = self.get_neighbors(node)
+            for i in neighbors:
+                node_v = i.vertex
+                if node_v in visited:
+                    continue
+                else:
+                    nodes.append(node_v)
+                    visited.add(node_v)
+                    rec_fun(node_v)
+
+        nodes.append(vertex)
+        rec_fun(vertex)
+        return nodes
+```
+https://github.com/jariryyousef/data-structures-and-algorithms/pull/47
