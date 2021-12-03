@@ -32,20 +32,19 @@ class HashTable:
         Initalization of Hash table
         
         """
-        self.__size = size
+        self._size = size
         self.buckets = [None] * size
 
-    def __hash(self, key):
+    def _hash(self, key):
         """
         Takes a key which is a string and returns an integer which is the index that will be used to store the key/value paris in a Node at that index.
         """
         value = 0
         for char in key:
           value += ord(char)
-          index = (value*7)%self.__size
+          index = (value*7)%self._size
         return index
 
-        # return sum([ord(char) for char in key]) * 7 % self.__size
 
 
     def add(self, key, value):
@@ -57,7 +56,7 @@ class HashTable:
         Return : No return value
         """
 
-        index = self.__hash(key)
+        index = self._hash(key)
 
         if not self.buckets[index]:
           self.buckets[index] = LinkedList()
@@ -73,7 +72,7 @@ class HashTable:
       :rvalue any
       """
       # calculate index
-      index = self.__hash(key)
+      index = self._hash(key)
       # check if there is a non empty bucket at the index
       if self.buckets[index]:
         # iterate over linked list
@@ -94,7 +93,7 @@ class HashTable:
       Arguments: key
       Returns: Boolean
       """
-      index = self.__hash(key)
+      index = self._hash(key)
       if self.buckets[index]:
         linked_list = self.buckets[index]
         current = linked_list.head
