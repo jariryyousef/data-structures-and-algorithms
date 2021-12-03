@@ -14,7 +14,7 @@ def test_hash(hashtable):
 	679 % 1024 ==> 679
 	"""
 	expected = 679
-	actual = hashtable._HashTable__hash("a")
+	actual = hashtable._hash("a")
 	assert actual == expected
 
 def test_hash_word(hashtable):
@@ -30,7 +30,7 @@ def test_hash_word(hashtable):
 	4669 % 1024 ==> 573
 	"""
 	expected = 573
-	actual =  hashtable._HashTable__hash("yousef")
+	actual =  hashtable._hash("yousef")
 	assert actual == expected
 
 def test_adding_a_key_and_value_to_hashtable():
