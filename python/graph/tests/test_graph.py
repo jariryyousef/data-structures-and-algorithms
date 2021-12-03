@@ -1,5 +1,6 @@
 from graph import __version__
 from graph.graph import  Graph, Vertex
+#  ,business_trip
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -96,3 +97,48 @@ def test_get_neighbors():
     assert neighbor_edge.vertex.value == 'banana'
 
     assert neighbor_edge.weight == 44
+
+
+
+
+
+#######################################Code Challange 36############################################## 
+def test_breadth_first_search():
+    graph = Graph()
+
+    yousef = graph.add_node('yousef')
+    mohammad = graph.add_node('mohammad')
+    abd = graph.add_node('abd')
+    jariry = graph.add_node('jariry')
+
+    graph.add_edge(yousef,mohammad)
+    graph.add_edge(mohammad,abd)
+    graph.add_edge(abd,jariry)
+
+    assert graph.breadth_first_search(yousef) ==  ['yousef' ,'mohammad' ,'abd','jariry'] 
+
+
+
+####################################### Code Challange 37 ##############################################
+def test_business_trip():
+  graph = Graph()
+
+  node1 = graph.add_node('Pandora')
+  node2 = graph.add_node('Arendelle')
+  node3 = graph.add_node('Metroville')
+  node4 = graph.add_node('Monstropolis')
+  node5 = graph.add_node('Narnia')
+  node6 = graph.add_node('Naboo')
+
+  graph.add_edge(node1,node2,150)
+  graph.add_edge(node1,node3,82)
+  graph.add_edge(node2,node3,99)
+  graph.add_edge(node2,node4,42)
+  graph.add_edge(node3,node4,105)
+  graph.add_edge(node3,node5,37)
+  graph.add_edge(node3,node6,26)
+  graph.add_edge(node4,node6,73)
+  graph.add_edge(node5,node6,250)
+  cities = [node1,node2,node3]
+  
+  assert graph.business_trip(cities) == (True, '$249')

@@ -32,20 +32,19 @@ class HashTable:
         Initalization of Hash table
         
         """
-        self.__size = size
-        self.__buckets = [None] * size
+        self._size = size
+        self.buckets = [None] * size
 
-    def __hash(self, key):
+    def _hash(self, key):
         """
         Takes a key which is a string and returns an integer which is the index that will be used to store the key/value paris in a Node at that index.
         """
         value = 0
         for char in key:
           value += ord(char)
-          index = (value*7)%self.__size
+          index = (value*7)%self._size
         return index
 
-        # return sum([ord(char) for char in key]) * 7 % self.__size
 
 
     def add(self, key, value):
@@ -57,13 +56,13 @@ class HashTable:
         Return : No return value
         """
 
-        index = self.__hash(key)
+        index = self._hash(key)
 
-        if not self.__buckets[index]:
-          self.__buckets[index] = LinkedList()
+        if not self.buckets[index]:
+          self.buckets[index] = LinkedList()
 
         my_value = [key,value]
-        self.__buckets[index].insert(my_value)
+        self.buckets[index].insert(my_value)
 
     def get(self, key):
       """
@@ -73,11 +72,11 @@ class HashTable:
       :rvalue any
       """
       # calculate index
-      index = self.__hash(key)
+      index = self._hash(key)
       # check if there is a non empty bucket at the index
-      if self.__buckets[index]:
+      if self.buckets[index]:
         # iterate over linked list
-        linked_list = self.__buckets[index]
+        linked_list = self.buckets[index]
         current = linked_list.head
         while current:
           # check if the key in each node matches
@@ -94,9 +93,9 @@ class HashTable:
       Arguments: key
       Returns: Boolean
       """
-      index = self.__hash(key)
-      if self.__buckets[index]:
-        linked_list = self.__buckets[index]
+      index = self._hash(key)
+      if self.buckets[index]:
+        linked_list = self.buckets[index]
         current = linked_list.head
 
         while current:
@@ -121,3 +120,18 @@ class HashTable:
         i = i.lower()
         if i and hash_table.contains(i):return i
         hash_table.add(i,i)
+
+
+#####################################CodeChallange33#######################################
+
+    def left_join(hash1, hash2):
+
+        arr = []
+        for i in hash1.buckets:
+            if i:
+                if hash2.contains(i.head.value[0]):
+                    right_item = hash2.get(i.head.value[0])
+                    arr.append([i.head.value[0], i.head.value[1],right_item])
+                else:
+                    arr.append([i.head.value[0], i.head.value[1],'Null'])
+        return arr

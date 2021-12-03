@@ -20,11 +20,11 @@ class Queue:
         self.dq = deque()
 
     def enqueue(self, value):
-        self.dq.appendLeft(value)
+        self.dq.appendleft(value)
 
     def dequeue(self):
-        self.dq.pop()
-
+        return self.dq.pop()
+        
     def __len__(self):
         return len(self.dq)
 
@@ -72,7 +72,7 @@ class Graph:
         """
     Initalization for a hashmap to hold the vertices
     """
-        self.__adjacency_list = {}
+        self._adjacency_list = {}
 
     def add_node(self, value):
         """
@@ -82,22 +82,22 @@ class Graph:
     """
         # new node
         v = Vertex(value)
-        self.__adjacency_list[v] = []
+        self._adjacency_list[v] = []
         return v
 
     def size(self):
-        return len(self.__adjacency_list)
+        return len(self._adjacency_list)
 
     def add_edge(self, start_vertex, end_vertex, weight=0):
         """Adds an edge to the graph"""
-        if start_vertex not in self.__adjacency_list:
+        if start_vertex not in self._adjacency_list:
             raise KeyError("Start Vertex not found in graph")
 
-        if end_vertex not in self.__adjacency_list:
+        if end_vertex not in self._adjacency_list:
             raise KeyError("End Vertex not found in graph")
 
         edge = Edge(end_vertex, weight)
-        self.__adjacency_list[start_vertex].append(edge)
+        self._adjacency_list[start_vertex].append(edge)
 
     def get_nodes(self):
         """
@@ -105,28 +105,62 @@ class Graph:
     Arguments: None
     return: All nodes
     """
-        return self.__adjacency_list.keys()
+        return self._adjacency_list.keys()
 
     def get_neighbors(self, vertex):
         """ """
-        return self.__adjacency_list.get(vertex, [])
+        return self._adjacency_list.get(vertex, [])
 
-    def breadth_first_search(self, start_vertex, action=(lambda vertex: None)):
+
+
+#######################################Code Challange 36############################################## 
+    def breadth_first_search(self, start_vertex):
         queue = Queue()
         visited = set()
-
+        nodes = []
         queue.enqueue(start_vertex)
         visited.add(start_vertex)
 
         while len(queue):
             current_vertex = queue.dequeue()
-            action(current_vertex)
 
-            neighbors = self.get_neigbors(current_vertex)
-
+            neighbors = self.get_neighbors(current_vertex)
+            nodes.append(current_vertex.value)
             for edge in neighbors:
                 neighbor = edge.vertex
 
                 if neighbor not in visited:
                     visited.add(neighbor)
                     queue.enqueue(neighbor)
+        return nodes
+
+  
+####################################### Code Challange 37 ############################################## 
+
+    def business_trip(self,cities):
+            if len(cities) == 0:
+                return False,'$0'
+            if self._adjacency_list[cities[0]] == []:
+                return False,'$0'
+
+            count = 0
+            path = False
+
+            for i in range(len(cities)-1):
+                neighbors = self._adjacency_list[cities[i]]
+
+                for j in neighbors:
+
+                    if cities[i+1].value == j.vertex.value:
+                        count += j.weight
+                        path = True
+                        break
+                    
+                    else:
+                        count += 0
+                        path = False
+            
+            if not path:
+                return False,'$0'
+            
+            return True,'$'+ str(count)
